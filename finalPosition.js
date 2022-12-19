@@ -15,6 +15,7 @@ const finalPosition = function (moves) {
       x++;
     }
     if ("west" === move) {
+      
       x--;
     }
   }
