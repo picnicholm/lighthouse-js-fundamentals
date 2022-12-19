@@ -5,13 +5,11 @@ const trash1 = "recycling";
 const bins1 = { waste: 4, recycling: 2, compost: 5 };
 
 const smartGarbage = (trash, bins) => {
-  const keys = Object.keys(bins);
-  for (let name of keys) {
-    if (trash === name) {
-      bins[name] += 1;
-    }
+  const result = { ...bins };
+  if (result.hasOwnProperty(trash)) {
+    result[trash] += 1;
   }
-  return bins;
+  return result;
 };
 
 console.log(smartGarbage(trash1, bins1));
